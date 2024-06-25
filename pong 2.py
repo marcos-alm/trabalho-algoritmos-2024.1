@@ -5,16 +5,15 @@
 
 # importando as bibliotecas
 import pygame
-from pygame.locals import *
+from pygame. locals import *
+from config_do_game.config import*
 from sys import exit
 
 #iniciando o pygame
 pygame.init()
- 
- #tela (janela)
-largura = 640
-altura = 480
-janela = pygame.display.set_mode((largura, altura))
 
-#nome do jogo no canto superior direito da tela
-pygame.display.set_caption('Pong 2: O Atirador')
+#loop principal
+while not fim:
+    for evento in pygame.event.get():
+        if evento.type == pygame.QUIT:
+            fim = True
